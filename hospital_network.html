@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <title>医疗机构网络图</title>
+    <script src="statics/js/jquery-3.2.1.min.js"></script>
+    <script src="statics/js/echarts/echarts.js"></script>
+    <style type="text/css">
+        html, body, #main { height: 100%; width: 100%; margin: 0; padding: 0 }
+    </style>
+</head>
+<body>
+    <div id="main" style=""></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+		
+            title: { text: '医疗机构网络图' },
+            tooltip: {
+                formatter: function (x) {
+                    return x.data.des;
+                }
+            },
+			
+            series: [
+                {
+                    type: 'graph',
+                    layout: 'force',
+                    symbolSize: 80,
+                    roam: true,
+                    edgeSymbol: ['circle', 'arrow'],
+                    edgeSymbolSize: [4, 10],
+					animation: false,
+					draggable: true,
+                    edgeLabel: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 20
+                            }
+                        }
+                    },
+                    force: {
+                        repulsion: 80,
+                        edgeLength: [10, 140]
+                    },
+                    draggable: true,
+                    itemStyle: {
+                        normal: {
+                            color: '#4b565b'
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            width: 2,
+                            color: '#4b565b'
+
+                        }
+                    },
+                    edgeLabel: {
+                        normal: {
+                            show: false,
+                            formatter: function (x) {
+                                return x.data.name;
+                            }
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: false,
+                            textStyle: {
+                            }
+                        }
+                    },
+                    data: [
+                        
+						{name: '中国人民解放军第一0二医院', des: '中国人民解放军第一0二医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州市肿瘤医院', des: '常州市肿瘤医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州市翠竹大药房连锁有限公司第一店', des: '常州市翠竹大药房连锁有限公司第一店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市翠竹大药房连锁有限公司永宁店', des: '常州市翠竹大药房连锁有限公司永宁店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州海伦大众医药连锁有限公司药皇堂大药房', des: '常州海伦大众医药连锁有限公司药皇堂大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州大生堂药店有限公司', des: '常州大生堂药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市卫龄药店', des: '常州市卫龄药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州中诚医药连锁有限公司红梅菜场药店', des: '常州中诚医药连锁有限公司红梅菜场药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州中吴大药房有限公司红梅新村店', des: '常州中吴大药房有限公司红梅新村店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州人寿天医药连锁有限公司第二医药商场', des: '常州人寿天医药连锁有限公司第二医药商场', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州中诚医药连锁有限公司西夏墅药店', des: '常州中诚医药连锁有限公司西夏墅药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市新北区西夏墅镇卫生院', des: '常州市新北区西夏墅镇卫生院', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州市中医医院', des: '常州市中医医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州市妇幼保健院', des: '常州市妇幼保健院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '恒泰人民大药房连锁有限公司常州花西二店', des: '恒泰人民大药房连锁有限公司常州花西二店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市庆聚堂大药房有限公司安泰大药房', des: '常州市庆聚堂大药房有限公司安泰大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州万仁大药房有限公司第三分公司', des: '常州万仁大药房有限公司第三分公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市第二人民医院', des: '常州市第二人民医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州汉康药业有限公司西新桥店', des: '常州汉康药业有限公司西新桥店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市人寿天医药连锁有限公司东丰裕药店', des: '常州市人寿天医药连锁有限公司东丰裕药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州汉康药业有限公司杨棋店', des: '常州汉康药业有限公司杨棋店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区五星街道西仓社区卫生服务站', des: '常州市钟楼区五星街道西仓社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州奥园店', des: '恒泰人民大药房连锁有限公司常州奥园店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州弘强药店有限公司', des: '常州弘强药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市君乐大药房有限公司友康分公司', des: '常州市君乐大药房有限公司友康分公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市康润药店有限公司', des: '常州市康润药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区荷花池街道社区卫生服务中心', des: '常州市钟楼区荷花池街道社区卫生服务中心', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市第一人民医院', des: '常州市第一人民医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州市武进区红十字会医疗门诊部', des: '常州市武进区红十字会医疗门诊部', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州中吴大药房有限公司', des: '常州中吴大药房有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区青龙街道社区卫生服务中心', des: '常州市天宁区青龙街道社区卫生服务中心', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州市天宁区红梅街道金百国际社区卫生服务站', des: '常州市天宁区红梅街道金百国际社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区茶山街道丽华一村社区卫生服务站', des: '常州市天宁区茶山街道丽华一村社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州河海店', des: '恒泰人民大药房连锁有限公司常州河海店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市海河药店', des: '常州市海河药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州万仁大药房有限公司和平路店', des: '常州万仁大药房有限公司和平路店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州和平路店', des: '恒泰人民大药房连锁有限公司常州和平路店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区青龙街道青龙苑社区卫生服务站', des: '常州市天宁区青龙街道青龙苑社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州中诚医药连锁有限公司城东大药房', des: '常州中诚医药连锁有限公司城东大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州三角场药店', des: '恒泰人民大药房连锁有限公司常州三角场药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区青龙街道紫云苑社区卫生服务站', des: '常州市天宁区青龙街道紫云苑社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区红梅街道翠竹新村社区卫生服务站', des: '常州市天宁区红梅街道翠竹新村社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区红梅街道锦绣社区卫生服务站', des: '常州市天宁区红梅街道锦绣社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市翠竹大药房连锁有限公司天目店', des: '常州市翠竹大药房连锁有限公司天目店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市百信大药房有限公司', des: '常州市百信大药房有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区南大街街道世纪明珠园社区卫生服务站', des: '常州市钟楼区南大街街道世纪明珠园社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州勤业店', des: '恒泰人民大药房连锁有限公司常州勤业店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市翠竹大药房连锁有限公司冶金店', des: '常州市翠竹大药房连锁有限公司冶金店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市新北区薛家镇卫生院', des: '常州市新北区薛家镇卫生院', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州武进妇婴医院', des: '常州武进妇婴医院', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州红房子医院有限公司', des: '常州红房子医院有限公司', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州市天宁区红梅街道社区卫生服务中心', des: '常州市天宁区红梅街道社区卫生服务中心', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州新北区龙虎塘健龙药店有限公司', des: '常州新北区龙虎塘健龙药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市福安大药房有限公司', des: '常州市福安大药房有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市儿童医院', des: '常州市儿童医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州万仁大药房有限公司第一分公司', des: '常州万仁大药房有限公司第一分公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区妇幼保健计划生育服务中心', des: '常州市钟楼区妇幼保健计划生育服务中心', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区南大街街道城市社区卫生服务中心', des: '常州市钟楼区南大街街道城市社区卫生服务中心', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市长海大药房', des: '常州市长海大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '江苏海王星辰健康药房有限公司常州荆川店', des: '江苏海王星辰健康药房有限公司常州荆川店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区永红街道清潭花苑社区卫生服务站', des: '常州市钟楼区永红街道清潭花苑社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天一怀德药店有限公司', des: '常州市天一怀德药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州万仁大药房有限公司金谷花园店', des: '常州万仁大药房有限公司金谷花园店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区永红街道社区卫生服务中心', des: '常州市钟楼区永红街道社区卫生服务中心', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州市康宝大药房', des: '常州市康宝大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市第三人民医院', des: '常州市第三人民医院', symbolSize:30, itemStyle:{normal:{color:'blue'}}},
+{name: '常州市人寿天医药连锁公司回春药店', des: '常州市人寿天医药连锁公司回春药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市普安中西医药店有限公司', des: '常州市普安中西医药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房有限公司常州光华路店', des: '恒泰人民大药房有限公司常州光华路店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州汤庄店', des: '恒泰人民大药房连锁有限公司常州汤庄店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州益生康健医药连锁有限公司盛华大药房', des: '常州益生康健医药连锁有限公司盛华大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州中诚医药连锁有限公司百年金龟大药房', des: '常州中诚医药连锁有限公司百年金龟大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区红梅街道北环南村社区卫生服务站', des: '常州市天宁区红梅街道北环南村社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市同联大药房有限公司明杰店', des: '常州市同联大药房有限公司明杰店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市人寿天医药连锁有限公司医药商场', des: '常州市人寿天医药连锁有限公司医药商场', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州万仁大药房有限公司第二分公司', des: '常州万仁大药房有限公司第二分公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市弘都大药房有限公司', des: '常州市弘都大药房有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '新北区春江仁和大药房', des: '新北区春江仁和大药房', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区桂平药店', des: '常州市钟楼区桂平药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市第一人民医院行政中心门诊部', des: '常州市第一人民医院行政中心门诊部', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区兰陵街道浦南南村社区卫生服务站', des: '常州市天宁区兰陵街道浦南南村社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市钟楼区新闸街道社区卫生服务中心', des: '常州市钟楼区新闸街道社区卫生服务中心', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '恒泰人民大药房连锁有限公司常州竹林药店', des: '恒泰人民大药房连锁有限公司常州竹林药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州朝阳店', des: '恒泰人民大药房连锁有限公司常州朝阳店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市人寿天医药连锁有限公司正和药店', des: '常州市人寿天医药连锁有限公司正和药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区茶山街道社区卫生服务中心', des: '常州市天宁区茶山街道社区卫生服务中心', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市天宁区兰陵街道劳动新村社区卫生服务站', des: '常州市天宁区兰陵街道劳动新村社区卫生服务站', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市新北区安家卫生院', des: '常州市新北区安家卫生院', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '常州中诚医药连锁有限公司安家药店', des: '常州中诚医药连锁有限公司安家药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市千方大药房有限公司', des: '常州市千方大药房有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市惠康药店有限公司', des: '常州市惠康药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州喜洋洋大药房有限公司', des: '常州喜洋洋大药房有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市为康药店有限公司', des: '常州市为康药店有限公司', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市武进区潞城街道社区卫生服务中心', des: '常州市武进区潞城街道社区卫生服务中心', symbolSize:10, itemStyle:{normal:{color:'red'}}},
+{name: '恒泰人民（江苏）大药房连锁有限公司常州百丈店', des: '恒泰人民（江苏）大药房连锁有限公司常州百丈店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州好邻居大药房有限公司百姓阳光店', des: '常州好邻居大药房有限公司百姓阳光店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '恒泰人民大药房连锁有限公司常州路南店', des: '恒泰人民大药房连锁有限公司常州路南店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+{name: '常州市第七人民医院', des: '常州市第七人民医院', symbolSize:20, itemStyle:{normal:{color:'yellow'}}},
+{name: '常州人寿天医药连锁有限公司康源药店', des: '常州人寿天医药连锁有限公司康源药店', symbolSize:40, itemStyle:{normal:{color:'green'}}},
+
+						
+                    ],
+                    links: [
+                        {source: '常州市肿瘤医院', target: '中国人民解放军第一0二医院', name: null, des: '0'},
+{source: '常州市翠竹大药房连锁有限公司永宁店', target: '常州市翠竹大药房连锁有限公司第一店', name: null, des: '0'},
+{source: '常州海伦大众医药连锁有限公司药皇堂大药房', target: '常州市翠竹大药房连锁有限公司第一店', name: null, des: '0'},
+{source: '常州市卫龄药店', target: '常州大生堂药店有限公司', name: null, des: '0'},
+{source: '常州中吴大药房有限公司红梅新村店', target: '常州中诚医药连锁有限公司红梅菜场药店', name: null, des: '0'},
+{source: '常州大生堂药店有限公司', target: '常州人寿天医药连锁有限公司第二医药商场', name: null, des: '0'},
+{source: '常州市新北区西夏墅镇卫生院', target: '常州中诚医药连锁有限公司西夏墅药店', name: null, des: '0'},
+{source: '常州市妇幼保健院', target: '常州市中医医院', name: null, des: '0'},
+{source: '常州市庆聚堂大药房有限公司安泰大药房', target: '恒泰人民大药房连锁有限公司常州花西二店', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州万仁大药房有限公司第三分公司', name: null, des: '0'},
+{source: '常州市人寿天医药连锁有限公司东丰裕药店', target: '常州汉康药业有限公司西新桥店', name: null, des: '0'},
+{source: '常州市钟楼区五星街道西仓社区卫生服务站', target: '常州汉康药业有限公司杨棋店', name: null, des: '0'},
+{source: '常州弘强药店有限公司', target: '恒泰人民大药房连锁有限公司常州奥园店', name: null, des: '0'},
+{source: '常州市康润药店有限公司', target: '常州市君乐大药房有限公司友康分公司', name: null, des: '0'},
+{source: '常州市第一人民医院', target: '常州市钟楼区荷花池街道社区卫生服务中心', name: null, des: '0'},
+{source: '常州中吴大药房有限公司', target: '常州市武进区红十字会医疗门诊部', name: null, des: '0'},
+{source: '常州市天宁区青龙街道社区卫生服务中心', target: '常州市第二人民医院', name: null, des: '0'},
+{source: '常州市天宁区红梅街道金百国际社区卫生服务站', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '常州市中医医院', target: '常州市第二人民医院', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州市天宁区茶山街道丽华一村社区卫生服务站', name: null, des: '0'},
+{source: '常州市海河药店', target: '恒泰人民大药房连锁有限公司常州河海店', name: null, des: '0'},
+{source: '常州市中医医院', target: '常州万仁大药房有限公司和平路店', name: null, des: '0'},
+{source: '常州市天宁区青龙街道社区卫生服务中心', target: '恒泰人民大药房连锁有限公司常州和平路店', name: null, des: '0'},
+{source: '常州市天宁区青龙街道青龙苑社区卫生服务站', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '恒泰人民大药房连锁有限公司常州三角场药店', target: '常州中诚医药连锁有限公司城东大药房', name: null, des: '0'},
+{source: '常州市天宁区青龙街道紫云苑社区卫生服务站', target: '常州市第二人民医院', name: null, des: '0'},
+{source: '常州市中医医院', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '常州市天宁区红梅街道锦绣社区卫生服务站', target: '常州市天宁区红梅街道翠竹新村社区卫生服务站', name: null, des: '0'},
+{source: '常州万仁大药房有限公司和平路店', target: '恒泰人民大药房连锁有限公司常州和平路店', name: null, des: '0'},
+{source: '常州中吴大药房有限公司', target: '常州市翠竹大药房连锁有限公司天目店', name: null, des: '0'},
+{source: '常州市肿瘤医院', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '恒泰人民大药房连锁有限公司常州和平路店', target: '常州市百信大药房有限公司', name: null, des: '0'},
+{source: '常州市钟楼区南大街街道世纪明珠园社区卫生服务站', target: '常州市第二人民医院', name: null, des: '0'},
+{source: '常州市肿瘤医院', target: '恒泰人民大药房连锁有限公司常州勤业店', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州汉康药业有限公司杨棋店', name: null, des: '0'},
+{source: '常州市新北区薛家镇卫生院', target: '常州市翠竹大药房连锁有限公司冶金店', name: null, des: '0'},
+{source: '常州红房子医院有限公司', target: '常州武进妇婴医院', name: null, des: '0'},
+{source: '中国人民解放军第一0二医院', target: '常州市天宁区红梅街道社区卫生服务中心', name: null, des: '0'},
+{source: '常州新北区龙虎塘健龙药店有限公司', target: '常州市翠竹大药房连锁有限公司天目店', name: null, des: '0'},
+{source: '常州市儿童医院', target: '常州市福安大药房有限公司', name: null, des: '0'},
+{source: '恒泰人民大药房连锁有限公司常州勤业店', target: '常州市钟楼区五星街道西仓社区卫生服务站', name: null, des: '0'},
+{source: '常州万仁大药房有限公司第一分公司', target: '恒泰人民大药房连锁有限公司常州勤业店', name: null, des: '0'},
+{source: '常州市钟楼区南大街街道城市社区卫生服务中心', target: '常州市钟楼区妇幼保健计划生育服务中心', name: null, des: '0'},
+{source: '江苏海王星辰健康药房有限公司常州荆川店', target: '常州市长海大药房', name: null, des: '0'},
+{source: '常州万仁大药房有限公司第三分公司', target: '常州市钟楼区永红街道清潭花苑社区卫生服务站', name: null, des: '0'},
+{source: '常州市第一人民医院', target: '常州市天一怀德药店有限公司', name: null, des: '0'},
+{source: '常州市钟楼区永红街道社区卫生服务中心', target: '常州万仁大药房有限公司金谷花园店', name: null, des: '0'},
+{source: '常州市康宝大药房', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '常州市妇幼保健院', target: '常州市第三人民医院', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州市儿童医院', name: null, des: '0'},
+{source: '常州市第一人民医院', target: '常州市人寿天医药连锁公司回春药店', name: null, des: '0'},
+{source: '恒泰人民大药房有限公司常州光华路店', target: '常州市普安中西医药店有限公司', name: null, des: '0'},
+{source: '常州益生康健医药连锁有限公司盛华大药房', target: '恒泰人民大药房连锁有限公司常州汤庄店', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州中诚医药连锁有限公司百年金龟大药房', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州市天宁区红梅街道北环南村社区卫生服务站', name: null, des: '0'},
+{source: '恒泰人民大药房连锁有限公司常州勤业店', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '常州市第一人民医院', target: '常州市同联大药房有限公司明杰店', name: null, des: '0'},
+{source: '常州市人寿天医药连锁有限公司医药商场', target: '常州万仁大药房有限公司和平路店', name: null, des: '0'},
+{source: '常州中吴大药房有限公司', target: '常州市天宁区红梅街道翠竹新村社区卫生服务站', name: null, des: '0'},
+{source: '常州市第一人民医院', target: '常州万仁大药房有限公司和平路店', name: null, des: '0'},
+{source: '常州万仁大药房有限公司第二分公司', target: '常州市翠竹大药房连锁有限公司第一店', name: null, des: '0'},
+{source: '新北区春江仁和大药房', target: '常州市弘都大药房有限公司', name: null, des: '0'},
+{source: '常州市钟楼区桂平药店', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '常州市第三人民医院', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '中国人民解放军第一0二医院', target: '常州市第一人民医院行政中心门诊部', name: null, des: '0'},
+{source: '常州市第三人民医院', target: '常州市第二人民医院', name: null, des: '0'},
+{source: '常州市中医医院', target: '常州市天宁区兰陵街道浦南南村社区卫生服务站', name: null, des: '0'},
+{source: '常州市钟楼区永红街道清潭花苑社区卫生服务站', target: '常州市长海大药房', name: null, des: '0'},
+{source: '常州市中医医院', target: '常州市天宁区青龙街道青龙苑社区卫生服务站', name: null, des: '0'},
+{source: '常州万仁大药房有限公司第一分公司', target: '恒泰人民大药房连锁有限公司常州花西二店', name: null, des: '0'},
+{source: '常州市钟楼区新闸街道社区卫生服务中心', target: '中国人民解放军第一0二医院', name: null, des: '0'},
+{source: '常州中诚医药连锁有限公司城东大药房', target: '恒泰人民大药房连锁有限公司常州竹林药店', name: null, des: '0'},
+{source: '常州市长海大药房', target: '常州市钟楼区永红街道清潭花苑社区卫生服务站', name: null, des: '0'},
+{source: '常州人寿天医药连锁有限公司第二医药商场', target: '恒泰人民大药房连锁有限公司常州朝阳店', name: null, des: '0'},
+{source: '常州万仁大药房有限公司和平路店', target: '常州市人寿天医药连锁有限公司正和药店', name: null, des: '0'},
+{source: '常州市第二人民医院', target: '常州市第三人民医院', name: null, des: '0'},
+{source: '恒泰人民大药房连锁有限公司常州和平路店', target: '常州市中医医院', name: null, des: '0'},
+{source: '恒泰人民大药房连锁有限公司常州和平路店', target: '常州万仁大药房有限公司第二分公司', name: null, des: '0'},
+{source: '常州市天宁区茶山街道社区卫生服务中心', target: '常州市第一人民医院', name: null, des: '0'},
+{source: '常州市第三人民医院', target: '常州市天宁区红梅街道金百国际社区卫生服务站', name: null, des: '0'},
+{source: '常州市中医医院', target: '常州市天宁区兰陵街道劳动新村社区卫生服务站', name: null, des: '0'},
+{source: '常州中诚医药连锁有限公司安家药店', target: '常州市新北区安家卫生院', name: null, des: '0'},
+{source: '常州市第一人民医院', target: '常州中诚医药连锁有限公司城东大药房', name: null, des: '0'},
+{source: '常州市钟楼区永红街道清潭花苑社区卫生服务站', target: '江苏海王星辰健康药房有限公司常州荆川店', name: null, des: '0'},
+{source: '常州市天宁区红梅街道锦绣社区卫生服务站', target: '常州市千方大药房有限公司', name: null, des: '0'},
+{source: '常州喜洋洋大药房有限公司', target: '常州市惠康药店有限公司', name: null, des: '0'},
+{source: '常州市武进区潞城街道社区卫生服务中心', target: '常州市为康药店有限公司', name: null, des: '0'},
+{source: '常州好邻居大药房有限公司百姓阳光店', target: '恒泰人民（江苏）大药房连锁有限公司常州百丈店', name: null, des: '0'},
+{source: '常州市钟楼区南大街街道城市社区卫生服务中心', target: '常州市翠竹大药房连锁有限公司永宁店', name: null, des: '0'},
+{source: '常州市妇幼保健院', target: '常州万仁大药房有限公司和平路店', name: null, des: '0'},
+{source: '常州市第七人民医院', target: '恒泰人民大药房连锁有限公司常州路南店', name: null, des: '0'},
+{source: '常州万仁大药房有限公司第三分公司', target: '常州人寿天医药连锁有限公司康源药店', name: null, des: '0'},
+{source: '常州市庆聚堂大药房有限公司安泰大药房', target: '常州市第三人民医院', name: null, des: '0'},
+]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
